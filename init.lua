@@ -11,12 +11,28 @@ vim.opt.expandtab = true    -- convert tabs to spaces
 
 
 -- Plugins
-local packerstrap = require "packerstrap"
-return require("packer").startup(function(use)
-  use "wbthomason/packer.nvim"
+local packerstrap = require("packerstrap")()
+require("packer").startup(function(use)
+    use "wbthomason/packer.nvim"
+    use 'nvim-tree/nvim-web-devicons'
+    use 'lewis6991/gitsigns.nvim'
+    use "romgrk/barbar.nvim"
+    use {"catppuccin/nvim", as = "catppuccin"}
 
   if packerstrap then
     require("packer").sync()
   end
 end)
+
+
+-- Keybinds
+require("keybinds")()
+
+
+-- Tabs
+require("tabs")()
+
+
+-- Theme
+require("theme")()
 
