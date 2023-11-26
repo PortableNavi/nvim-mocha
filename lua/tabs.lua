@@ -19,6 +19,8 @@ return function()
                 added = {enabled = true, icon = ''},
             },
             no_name_title = "Scratch",
-        }
+        },
+        
+        sidebar_filetypes = {NvimTree=true},
     }
 end 

@@ -35,8 +35,8 @@ return function()
     map("i", "<S-A-w>", "<ESC><C-w>q", opts)
 
     -- Toggle explorer with Alt+f
-    map("n", "<A-f>", ":SidebarNvimToggle<CR>", opts)
-    map("i", "<A-f>", "<ESC>:SidebarNvimToggle<CR>i", opts)
+    map("n", "<A-f>", ":NvimTreeToggle<CR>", opts)
+    map("i", "<A-f>", "<ESC>:NvimTreeToggle<CR>i", opts)
 
     -- Switch buffer Ctrl+Alt+Left/Right
     map("n", "<A-Right>", ":BufferNext<CR>", opts)
