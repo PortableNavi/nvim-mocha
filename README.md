@@ -4,9 +4,8 @@ A small and comfy nvim configuration.
   <img src="https://raw.githubusercontent.com/PortableNavi/nvim-mocha/master/assets/nvim_config_splash.png"/><br/>
 	<img src="https://raw.githubusercontent.com/PortableNavi/nvim-mocha/master/assets/nvim_config_high_load.png"/>
 </p>
-<hr/>
 
-### Installation
+## Installation
 Clone this repo and copy paste it's contents into `~/.config/nvim`
 ```zsh
 git clone https://github.com/PortableNavi/nvim-mocha
@@ -17,8 +16,8 @@ After that run `nvim`. Nvim will now download a few plugins, ignore any errors a
 
 > If the Errors persist after restrating nvim, consider manually updating nvim-mochas plugins by running `:PackerSync` in nvim
 
-### Keybinds & Features
+## Keybinds & Features
 wip
 
-### List of Plugins
+## List of Plugins
 wip
