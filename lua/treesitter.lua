@@ -13,6 +13,15 @@ return function()
       enable = true,
       extended_mode = true,
       max_file_lines = nil,
+      colors = {
+                "#89b4fa",
+                "#89dceb",
+                "#f9e2af",
+                "#fab387",
+                "#eba0ac",
+                "#f38ba8",
+                "#cba6f7",
+            },
     },
   })
 end
