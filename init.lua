@@ -29,6 +29,7 @@ require("packer").startup(function(use)
     use "Saecki/crates.nvim"
     use "nat-418/cmp-color-names.nvim"
     use "nvim-lua/plenary.nvim"
+    use "nvim-telescope/telescope.nvim"
 
   if packerstrap then
     require("packer").sync()
@@ -57,3 +58,7 @@ require("completion")()
 
 -- Autopairs
 require("autopair")()
+
+
+-- Misc
+require("telescope").setup({})
