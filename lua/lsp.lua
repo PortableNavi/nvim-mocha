@@ -46,7 +46,7 @@ return function()
         map("D", "<cmd>lua vim.lsp.buf.declaration()<CR>")
         map("d", "<cmd>lua vim.lsp.buf.definition()<CR>")
         map("h", "<cmd>lua vim.lsp.buf.hover()<CR>")
-        map("i", "<cmd>lua vim.lsp.buf.implementation()<CR>")
+        map("I", "<cmd>lua vim.lsp.buf.implementation()<CR>")
         map("H", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
         map("r", "<cmd>lua vim.lsp.buf.references()<CR>")
     end
