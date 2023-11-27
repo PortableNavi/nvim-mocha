@@ -23,6 +23,7 @@ return function()
         week_header = {
             enable = true,
         },
+        footer = { "", "Don't forget to update your plugins!"},
         shortcut = {
             { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' },
             {
