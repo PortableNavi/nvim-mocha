@@ -33,18 +33,7 @@ return function()
         return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
     end
 
-    require("snippy").setup({
-        mappings = {
-            is = {
-                ["<Tab>"] = "expand_or_advance",
-                ["<S-Tab>"] = "previous",
-            },
-
-            nx = {
-                ["<A-x>"] = "cut_text"
-            }
-        }
-    })
+    --require("snippy").setup()
 
     require("crates").setup({src = {cmp={enabled=true}}})
     require("cmp-color-names").setup()
@@ -53,16 +42,16 @@ return function()
     cmp.setup({
         snippet = {
             expand = function(args)
-                requrie("snippy").expand_snippet(args.body)
+                require("snippy").expand_snippet(args.body)
             end
         },
 
         mapping = {
             ["<C-Up>"] = cmp.mapping.select_prev_item(),
-            ["<C-Down"] = cmp.mapping.select_next_item(),
+            ["<C-Down>"] = cmp.mapping.select_next_item(),
             ["<C-S-Down>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
             ["<C-S-Up>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-            ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+            --["<C-Space>"] = cmp.mapping(cmp.mapping.complete(, { "i", "c" }),
             ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
             ["<C-e>"] = cmp.mapping {
                 i = cmp.mapping.abort(),
@@ -70,7 +59,22 @@ return function()
             },
             -- Accept currently selected item. If none selected, `select` first item.
             -- Set `select` to `false` to only confirm explicitly selected items.
-            ["<CR>"] = cmp.mapping.confirm { select = true },
+            ["<C-Space>"] = cmp.mapping.confirm { select = true },
+            ["<Tab>"] = cmp.mapping(function(fb)
+                if cmp.visible() then
+                    cmp.select_next_item()
+                else
+                    fb()
+                end
+            end),
+            ["<S-Tab>"] = cmp.mapping(function(fb)
+                if cmp.visible() then
+                    cmp.select_prev_item()
+                else
+                    fb()
+                end
+            end),
+
         },
 
         formatting = {

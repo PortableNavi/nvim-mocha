@@ -24,6 +24,8 @@ require("packer").startup(function(use)
     use "windwp/nvim-autopairs"
     use "lukas-reineke/indent-blankline.nvim"
     use "neovim/nvim-lspconfig"
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
@@ -53,6 +55,9 @@ require("tabs")()
 -- Theme (Splashscreen, Colorscheme, Statusline, etc)
 require("theme")()
 
+
+-- Language Server
+require("lsp")()
 
 -- Autocomplete
 require("completion")()
