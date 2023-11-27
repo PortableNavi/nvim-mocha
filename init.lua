@@ -21,6 +21,20 @@ require("packer").startup(function(use)
     use "nvimdev/dashboard-nvim"
     use "nvim-lualine/lualine.nvim"
     use "nvim-tree/nvim-tree.lua"
+    use "windwp/nvim-autopairs"
+    use "lukas-reineke/indent-blankline.nvim"
+    use "neovim/nvim-lspconfig"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "hrsh7th/nvim-cmp"
+    use "dcampos/nvim-snippy"
+    use "dcampos/cmp-snippy"
+    use "honza/vim-snippets"
+    use "Saecki/crates.nvim"
+    use "nat-418/cmp-color-names.nvim"
+    use "nvim-lua/plenary.nvim"
 
   if packerstrap then
     require("packer").sync()
@@ -38,3 +52,11 @@ require("tabs")()
 
 -- Theme (Splashscreen, Colorscheme, Statusline, etc)
 require("theme")()
+
+
+-- Autocomplete
+require("completion")()
+
+
+-- Autopairs
+require("autopair")()

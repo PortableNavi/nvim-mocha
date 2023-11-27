@@ -19,7 +19,7 @@ return function()
     })
 
     local api = require("nvim-tree.api")
-    api.events.subscribe(api.events.Event.FileCreated, function(f) vim.cmd("edit " .. f.name) end)
+    --api.events.subscribe(api.events.Event.FileCreated, function(f) vim.cmd("edit " .. f.name) end) 
 
     local git_add = function()
         local node = api.tree.get_node_under_cursor()

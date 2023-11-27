@@ -47,5 +47,28 @@ return function()
             },
             },
         },
-    }) 
+    })
+
+    require("ibl").setup({
+        exclude = {
+            filetypes = {
+                "lspinfo",
+                "packer",
+                "checkhealth",
+                "help",
+                "man",
+                "gitcommit",
+                "TelescopePrompt",
+                "TelescopeResults",
+                "dashboard",
+                "",
+            },
+            buftypes = {
+                "terminal",
+                "nofile",
+                "quickfix",
+                "prompt",
+            },
+        }
+    })
 end 
