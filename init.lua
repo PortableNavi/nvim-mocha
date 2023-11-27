@@ -2,6 +2,10 @@
 require("options")()
 
 
+-- Keybinds
+require("keybinds")()
+
+
 -- Plugins
 local packerstrap = require("packerstrap")()
 require("packer").startup(function(use)
@@ -30,15 +34,14 @@ require("packer").startup(function(use)
     use "nat-418/cmp-color-names.nvim"
     use "nvim-lua/plenary.nvim"
     use "nvim-telescope/telescope.nvim"
+    use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
+    use "p00f/nvim-ts-rainbow"
+    use "akinsho/toggleterm.nvim"
 
   if packerstrap then
     require("packer").sync()
   end
 end)
-
-
--- Keybinds
-require("keybinds")()
 
 
 -- Tabs
@@ -62,3 +65,11 @@ require("autopair")()
 
 -- Misc
 require("telescope").setup({})
+
+
+-- Terminal
+require("terminal")()
+
+
+-- Syntax Highlighting
+require("treesitter")
