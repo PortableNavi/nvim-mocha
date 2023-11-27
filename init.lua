@@ -72,4 +72,4 @@ require("terminal")()
 
 
 -- Syntax Highlighting
-require("treesitter")
+require("treesitter")()
