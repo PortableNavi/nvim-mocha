@@ -1,3 +1,19 @@
+-- Code Insights in Normal mode (Change Keybinds in "nvim-mocha/lua/lsp.lua"):
+    -- Documentation:                Press h with cursor over item
+    -- Jump to definition:           Press d or Shift-d with cursor over item
+
+-- Tab Complete Navigation (Change Keybinds in "nvim-mocha/lua/completion.lua")
+    -- Navigate Suggestion List:    Ctrl-Up/Down
+    -- Next Suggestion:             Tab
+    -- Complete:                    Ctrl-Space
+    -- Close Autocomplete Window:   Ctrl-e
+
+-- Sidebar Navigation
+    -- Create a new File/Folder:    a
+    -- Copy, Cut, Paste:            c, x, p
+    -- Rename:                      r
+    -- Open/Close Folder:           Enter
+
 return function()
     local map = vim.api.nvim_set_keymap
     local opts = {noremap=true, silent=true}
@@ -77,16 +93,3 @@ return function()
     -- Open file Ctrl+o
     map("n", "<C-o>", ":e ", opts)
 end
-
--- Tab Complete Navigation
-    -- Navigate Suggestion List:    Ctrl-Up/Down
-    -- Next Suggestion:             Tab
-    -- Complete:                    Ctrl-Space
-    -- Close Autocomplete Window:   Ctrl-e
-
--- Sidebar Navigation
-    -- Create a new File/Folder:    a
-    -- Copy, Cut, Paste:            c, x, p
-    -- Rename:                      r
-    -- Open/Close Folder:           Enter
-
