@@ -4,14 +4,14 @@ return function()
     local eopts = {noremap=true, silent=true, expr=true}
 
 
-    -- Indentation 
+    -- Indentation Tab / Shift-Tab
     map("v", "<tab>", ">gv", opts)
     map("v", "<S-tab>", "<gv", opts)
 
     -- Cancel Search Highlighting
     map("n", "<C-7>", ":nohlsearch<Bar>:echo<CR>", opts)
 
-    -- Window Navigation
+    -- Window Navigation Ctrl-ArrowKeys
     map("n", "<C-Left>", "<C-w>h", opts)
     map("n", "<C-Down>", "<C-w>j", opts)
     map("n", "<C-Up>", "<C-w>k", opts)
@@ -69,7 +69,7 @@ return function()
     map("n", "<C-g>", ":Telescope live_grep<CR>", opts)
     map("n", "<C-h>", ":Telescope man_pages<CR>", opts)
 
-    -- Toogle Terminal
+    -- Toogle Terminal Ctrl-T
     map("n", "<C-t>", ":ToggleTerm<CR>", opts)
     map("i", "<C-t>", "<ESC>:ToggleTerm<CR>i", opts)
     map("t", "<C-t>", "<ESC>:ToggleTerm<CR>i", opts)
@@ -78,5 +78,15 @@ return function()
     map("n", "<C-o>", ":e ", opts)
 end
 
+-- Tab Complete Navigation
+    -- Navigate Suggestion List:    Ctrl-Up/Down
+    -- Next Suggestion:             Tab
+    -- Complete:                    Ctrl-Space
+    -- Close Autocomplete Window:   Ctrl-e
 
+-- Sidebar Navigation
+    -- Create a new File/Folder:    a
+    -- Copy, Cut, Paste:            c, x, p
+    -- Rename:                      r
+    -- Open/Close Folder:           Enter
 
